@@ -3,7 +3,7 @@ import argparse
 from rpi_ws281x import PixelStrip, Color
 
 #LED strip configuration
-LED_COUNT = 70
+LED_COUNT = 80
 LED_PIN = 18
 LED_FREQ_HZ = 800000
 LED_DMA = 10
