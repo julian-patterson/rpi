@@ -2,8 +2,6 @@ import time
 from rpi_ws281x import PixelStrip, Color
 import argparse
 
-strip.begin()
-
 #LED strip configuration
 LED_COUNT = 80
 LED_PIN = 18
