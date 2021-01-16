@@ -23,7 +23,7 @@ def colorWipe(strip, color, wait_ms=50):
 
 #Color-variable assignment
 def blue():
-    colorWipe(strip, Color(0, 255, 0))
+    colorWipe(strip, Color(0, 0, 255))
 def red():
     colorWipe(strip, Color(255, 0, 0))
 def purple():
