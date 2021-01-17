@@ -32,6 +32,8 @@ def pink():
     colorWipe(strip, Color(255, 203, 192))
 def yellow():
     colorWipe(strip, Color(255, 0, 255))
+def green():
+    colorWipe(strip, Color(0, 255, 0)
 
 #Main Code
 if __name__ == '__main__':
@@ -59,6 +61,8 @@ if __name__ == '__main__':
                 pink()
             if userinput == 'yellow':
                 yellow()
+            if userinput == 'green':
+                green()
             else:
                 print = ('Please enter a valid color')
                 userinput = input('What color would you like: ')
