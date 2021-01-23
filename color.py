@@ -2,8 +2,10 @@ import time
 from rpi_ws281x import PixelStrip, Color
 import argparse
 
+
+
 #LED strip configuration
-LED_COUNT = 80
+LED_COUNT = 88
 LED_PIN = 18
 LED_FREQ_HZ = 800000
 LED_DMA = 10
@@ -22,18 +24,30 @@ def colorWipe(strip, color, wait_ms=50):
         time.sleep(wait_ms / 1000.0)
 
 #Color-variable assignment
-def blue():
+def green():
     colorWipe(strip, Color(0, 0, 255))
 def red():
     colorWipe(strip, Color(255, 0, 0))
+def blue():
+    colorWipe(strip, Color(0, 255, 0))
 def purple():
     colorWipe(strip, Color(128, 128, 0))
-def pink():
+def lightgrey():
     colorWipe(strip, Color(255, 203, 192))
 def yellow():
-    colorWipe(strip, Color(255, 0, 255))
-def green():
-    colorWipe(strip, Color(0, 255, 0)
+    colorWipe(strip, Color(255, 0, 103))
+##
+def white():
+    colorWipe(strip, Color(255, 255, 255))
+def turnoff():
+    colorWipe(strip, Color(0, 0, 0))
+def cyan():
+    colorWipe(strip, Color(0, 255, 255))
+def navy():
+    colorWipe(strip, Color(0, 128, 0))
+def salmon():
+    colorWipe(strip, Color(255, 150, 165))
+
 
 #Main Code
 if __name__ == '__main__':
@@ -47,25 +61,35 @@ if __name__ == '__main__':
     print('Press Ctrl-C to quit.')
     if not args.clear:
         print('Use -c arguement to clear LEDs on exit')
-    userinput = input('What color would you like: ')
-
+    print('You can choose the following colors: green, red, blue, purple, light grey, yellow, white, cyan, navy, salmon, or turn off')
     try:
         while True:
+            userinput = input('What color would you like: ')
             if userinput == 'blue':
-                yellow()
+                blue()
             if userinput == 'red':
                 red()
             if userinput == 'purple':
                 purple()
-            if userinput == 'pink':
-                pink()
+            if userinput == 'light grey':
+                lightgrey()
             if userinput == 'yellow':
                 yellow()
             if userinput == 'green':
                 green()
+            if userinput == 'white':
+                white()
+            if userinput == 'turn off':
+                turnoff()
+            if userinput == 'cyan':
+                cyan()
+            if userinput == 'navy':
+                navy()
+            if userinput == 'salmon':
+                salmon()
             else:
                 print = ('Please enter a valid color')
-                userinput = input('What color would you like: ')
+                
     except KeyboardInterrupt:
         if args.clear:
             colorWipe(strip, Color(0,0,0), 10)    
