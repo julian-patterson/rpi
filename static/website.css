@@ -1,0 +1,36 @@
+body
+{
+	background-color: LightSlateGrey;
+}
+
+h1
+{
+	color: black;
+	font-family: "Arial", sans-serif;
+	font-size: 300%;
+}
+h2
+{
+	color: black;
+	font-family: "Arial", sans-serif;
+	font-size: 300%;
+}
+
+p
+{
+	color: black;
+	font-family: sans;
+	font-size: 100%;
+	border: 1px solid powderblue;
+}
+.button {
+	font:bold 15px Arial;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #33333;
+	border-right: 1px solid #33333;
+	border-left: 1 px solid #333333;
+}
